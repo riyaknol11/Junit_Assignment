@@ -3,34 +3,34 @@ package com.knoldus;
 
 class StringUtils{
 
-    public String reverse(String string){
+    public String reverse(String inputString){
 
-        if(EmptyOrNot(string))
+        if(EmptyOrNot(inputString))
             return "Invalid input";
         String  reverse = "";
-        for(int index =string.length()-1; index >=0; --index){
-            reverse = reverse + string.charAt(index);
+        for(int index =inputString.length()-1; index >=0; --index){
+            reverse = reverse + inputString.charAt(index);
         }
         return reverse;
     }
 
-    public boolean EmptyOrNot(String string){
-        if(string.length()==0)
+    public boolean EmptyOrNot(String inputString){
+        if(inputString.length()==0)
             return true;
         else
             return false;
     }
 
 
-    public boolean isPalindrome(String string){
+    public boolean isPalindrome(String inputString){
 
-        if(EmptyOrNot(string))
+        if(EmptyOrNot(inputString))
             return false;
         String reverse = "";
-        for(int index = string.length()-1; index>=0; --index){
-            reverse = reverse + string.charAt(index);
+        for(int index = inputString.length()-1; index>=0; --index){
+            reverse = reverse + inputString.charAt(index);
         }
-        if(string.toLowerCase().equals(reverse.toLowerCase())) {
+        if(inputString.toLowerCase().equals(reverse.toLowerCase())) {
             return true;
         }
         else{
